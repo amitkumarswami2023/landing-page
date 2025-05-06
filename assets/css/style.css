@@ -327,6 +327,7 @@ Navbar Area Style
 }
 .desktop-nav .navbar .navbar-nav .nav-item a:hover, .desktop-nav .navbar .navbar-nav .nav-item a:focus, .desktop-nav .navbar .navbar-nav .nav-item a.active {
   color: #FF6D00;
+  font-weight: bold;
 }
 .desktop-nav .navbar .navbar-nav .nav-item a i {
   font-size: 18px;

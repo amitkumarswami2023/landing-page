@@ -244,7 +244,7 @@
                         <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                             <ul class="navbar-nav ms-auto">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link active">
+                                    <a href="#home" class="nav-link active">
                                         Home            
                                     </a>
                                 </li>
@@ -1593,6 +1593,46 @@
                 </div>
             </div>
         </section>
+
+        <section class="program-section">
+            <div class="container">
+                <h2>Find a Programme</h2>
+    
+                <div class="row">
+                    <!-- Left Sidebar -->
+                    <div class="col-md-4 program-list">
+                        <ul class="list-group">
+                            <li class="list-group-item"><button class="program-btn active" data-src="prgmData/ahs.html">B.Tech CSE</button></li>
+                            <li class="list-group-item"><button class="program-btn" data-src="prgmData/agri.html">Agricultural Sciences</button></li>
+                            <li class="list-group-item"><button class="program-btn" data-src="prgmData/bhs.html">Behavioural Sciences</button></li>
+                            <li class="list-group-item"><button class="program-btn" data-src="prgmData/cm.html">Commerce & Management</button></li>
+                            <li class="list-group-item"><button class="program-btn" data-src="prgmData/dental.html">Dental Sciences (SGT Dental College)</button></li>
+                            <li class="list-group-item"><button class="program-btn" data-src="prgmData/education.html">Education</button></li>
+                            <li class="list-group-item"><button class="program-btn" data-src="prgmData/engineering.html">Engineering & Technology</button></li>
+                            <li class="list-group-item"><button class="program-btn" data-src="prgmData/fashion.html">Design</button></li>
+                            <li class="list-group-item"><button class="program-btn" data-src="prgmData/htm.html">Hotel & Tourism Management</button></li>
+                            <li class="list-group-item"><button class="program-btn" data-src="prgmData/ims.html">Indian Medical System (Ayurveda)</button></li>
+                            <li class="list-group-item"><button class="program-btn" data-src="prgmData/law.html">Law</button></li>
+                            <li class="list-group-item"><button class="program-btn" data-src="prgmData/medical.html">Medicine & Health Sciences</button></li>
+                            <li class="list-group-item"><button class="program-btn" data-src="prgmData/masscomm.html">Mass Communication & Media Technology</button></li>
+                            <li class="list-group-item"><button class="program-btn" data-src="prgmData/nursing.html">Nursing</button></li>
+                            <li class="list-group-item"><button class="program-btn" data-src="prgmData/fnys.html">Naturopathy and Yogic Sciences</button></li>
+                            <li class="list-group-item"><button class="program-btn" data-src="prgmData/physiotherapy.html">Physiotherapy</button></li>
+                            <li class="list-group-item"><button class="program-btn" data-src="prgmData/science.html">Applied and Basic Sciences</button></li>
+                            <li class="list-group-item"><button class="program-btn" data-src="prgmData/pharmacy.html">SGT College of Pharmacy</button></li>
+                            
+                        </ul>
+                    </div>
+    
+                    <!-- Right Content -->
+                    <div class="col-md-8">
+                        <div class="program-content-box">
+                            <div class="program-content">Loading...</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         
         <!--Start Footer Area-->
         <div class="footer-area pt-100 pb-70">
@@ -1732,6 +1772,37 @@
         <script src="assets/js/ajaxchimp.min.js"></script>
         <script src="assets/js/swiper-bundle.min.js"></script>
         <!--=== Custom js ===-->
+
+        <script>
+document.addEventListener('DOMContentLoaded', function () {
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('section');
+
+    window.addEventListener('scroll', () => {
+        let current = "";
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight; // Use offsetHeight for full height of the section
+            const sectionBottom = sectionTop + sectionHeight;
+
+            // Check if the section is in the viewport
+            if (pageYOffset >= sectionTop - sectionHeight / 3 && pageYOffset < sectionBottom - sectionHeight / 3) {
+                current = section.getAttribute("id");
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active'); // Remove active from all links
+            if (link.getAttribute("href").includes(current)) {
+                link.classList.add('active'); // Add active to the matching link
+            }
+        });
+    });
+});
+
+
+        </script>
         <script src="assets/js/custom.js"></script>
         <script>
             var swiper = new Swiper(".mySwiper", {

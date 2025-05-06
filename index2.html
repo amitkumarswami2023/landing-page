@@ -64,208 +64,253 @@
 
         </style>
         <style>
-/* ---- TAB STYLES ---- */
-.admProgmType {
-    display: flex;
-    justify-content: start;
-    border-bottom: 2px solid #ddd;
-}
+            /* ---- TAB STYLES ---- */
+            .admProgmType {
+                display: flex;
+                justify-content: start;
+                border-bottom: 2px solid #ddd;
+            }
 
-.aptBtn {
-    padding: 10px 20px;
-    border: none;
-    background: #f0f0f0;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background 0.3s, color 0.3s;
-}
+            .aptBtn {
+                padding: 10px 20px;
+                border: none;
+                background: #f0f0f0;
+                cursor: pointer;
+                font-size: 16px;
+                transition: background 0.3s, color 0.3s;
+            }
 
-.aptBtn.active {
-    background: #007bff;
-    color: #fff;
-    font-weight: bold;
-}
+            .aptBtn.active {
+                background: #007bff;
+                color: #fff;
+                font-weight: bold;
+            }
 
-/* ---- HIDE ALL TAB CONTENTS INITIALLY ---- */
-.apcAccdList {
-    display: none;
-}
+            /* ---- HIDE ALL TAB CONTENTS INITIALLY ---- */
+            .apcAccdList {
+                display: none;
+            }
 
-.apcAccdList.active {
-    display: block;
-}
+            .apcAccdList.active {
+                display: block;
+            }
 
-/* ---- ACCORDION STYLES ---- */
-.apcAccdItem {
-    border: 1px solid #ddd;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    overflow: hidden;
-}
+            /* ---- ACCORDION STYLES ---- */
+            .apcAccdItem {
+                border: 1px solid #ddd;
+                margin-bottom: 10px;
+                border-radius: 5px;
+                overflow: hidden;
+            }
 
-.apcAccdHead {
-    background: white;
-    color: #007bff;
-    padding: 15px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background 0.3s;
-}
+            .apcAccdHead {
+                background: white;
+                color: #007bff;
+                padding: 15px;
+                cursor: pointer;
+                font-weight: bold;
+                transition: background 0.3s;
+            }
 
-.apcAccdHead:hover {
-    /* background: #0056b3; */
-}
+            .apcAccdHead:hover {
+                /* background: #0056b3; */
+            }
 
-.apcAccdContent {
-    display: none;
-    padding: 15px;
-    background: #f9f9f9;
-}
+            .apcAccdContent {
+                display: none;
+                padding: 15px;
+                background: #f9f9f9;
+            }
 
-/* Show content when accordion is open */
-.apcAccdItem.active .apcAccdContent {
-    display: block;
-}
+            /* Show content when accordion is open */
+            .apcAccdItem.active .apcAccdContent {
+                display: block;
+            }
 
-/* ---- RESPONSIVE FIXES ---- */
-@media (max-width: 768px) {
-    .admProgmType {
-        flex-direction: column;
-    }
-    
-    .aptBtn {
-        width: 100%;
-        text-align: center;
-    }
-}
+            /* ---- RESPONSIVE FIXES ---- */
+            @media (max-width: 768px) {
+                .admProgmType {
+                    flex-direction: column;
+                }
+                
+                .aptBtn {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
 
         </style>
 
-<style>
-    @media (max-width: 768px) {
-        .col-12 { width: 100%; min-height: auto; }
-    }
-</style>
-            <style>
-/* Section Styling */
-.program-section {
-    background-color: #0060AA;
-    padding: 3rem 0;
-    margin-bottom: 3rem;
-}
+        <style>
+            @media (max-width: 768px) {
+                .col-12 { width: 100%; min-height: auto; }
+            }
+        </style>
+        <style>
+            /* Section Styling */
+            .program-section {
+                background-color: #0060AA;
+                padding: 3rem 0;
+                margin-bottom: 3rem;
+            }
 
-.program-section h2 {
-    color: white;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 1.5rem;
-}
+            .program-section h2 {
+                color: white;
+                text-align: center;
+                font-size: 2rem;
+                font-weight: bold;
+                margin-bottom: 1.5rem;
+            }
 
-/* Sidebar (List of Programs) */
-.program-list .list-group-item {
-    padding: 5px;
-    border: none;
-    background: white;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
+            /* Sidebar (List of Programs) */
+            .program-list .list-group-item {
+                padding: 5px;
+                border: none;
+                background: white;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
 
-.program-list .list-group-item button {
-    width: 100%;
-    padding: 10px;
-    background: none;
-    border: none;
-    color: #002846;
-    font-size: 18px;
-    text-align: left;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
+            .program-list .list-group-item button {
+                width: 100%;
+                padding: 10px;
+                background: none;
+                border: none;
+                color: #002846;
+                font-size: 18px;
+                text-align: left;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
 
-.program-list .list-group-item button:hover,
-.program-list .list-group-item button.active {
-    background: #FF6D00;
-    color: white;
-}
+            .program-list .list-group-item button:hover,
+            .program-list .list-group-item button.active {
+                background: #FF6D00;
+                color: white;
+            }
 
-/* Program Content Box */
-.program-content-box {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    min-height: 250px; /* Keeps content visible */
-}
+            /* Program Content Box */
+            .program-content-box {
+                background: white;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+                min-height: 250px; /* Keeps content visible */
+            }
 
-/* Tab Buttons (Bachelor, Masters, PhD) */
-.admProgmType {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 15px;
-}
+            /* Tab Buttons (Bachelor, Masters, PhD) */
+            .admProgmType {
+                display: flex;
+                gap: 10px;
+                margin-bottom: 15px;
+            }
 
-.aptBtn {
-    background-color: #0056b3;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
+            .aptBtn {
+                background-color: #0056b3;
+                color: white;
+                border: none;
+                padding: 10px 15px;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
 
-.aptBtn:hover,
-.aptBtn.active {
-    background-color: #FF6D00;
-}
+            .aptBtn:hover,
+            .aptBtn.active {
+                background-color: #FF6D00;
+            }
 
-/* Accordion Items (Initially Hidden) */
-.apcAccdList {
-    display: none;
-}
+            /* Accordion Items (Initially Hidden) */
+            .apcAccdList {
+                display: none;
+            }
 
-.apcAccdList.active {
-    display: block;
-}
+            .apcAccdList.active {
+                display: block;
+            }
 
-/* Program Details */
-.apcAccdItem {
-    background: #f8f9fa;
-    padding: 15px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-}
+            /* Program Details */
+            .apcAccdItem {
+                background: #f8f9fa;
+                padding: 15px;
+                border-radius: 5px;
+                margin-bottom: 10px;
+                box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            }
 
-.apcAccdHead {
-    font-weight: bold;
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
+            .apcAccdHead {
+                font-weight: bold;
+                font-size: 1.2rem;
+                margin-bottom: 10px;
+            }
 
-.aacName {
-    font-weight: bold;
-    color: #333;
-    font-size: 18px;
-}
+            .aacName {
+                font-weight: bold;
+                color: #333;
+                font-size: 18px;
+            }
 
-/* 📱 Mobile Responsive Fix */
-@media (max-width: 768px) {
-    .row {
-        flex-direction: column;
-    }
+            /* 📱 Mobile Responsive Fix */
+            @media (max-width: 768px) {
+                .row {
+                    flex-direction: column;
+                }
 
-    .program-list {
-        width: 100%;
-    }
+                .program-list {
+                    width: 100%;
+                }
 
-    .program-content-box {
-        width: 100%;
-    }
-}
+                .program-content-box {
+                    width: 100%;
+                }
+            }
 
-            </style>
+        </style>
+
+        <style>
+            .blueBg-1 {
+            background-color: #003366;
+            }
+        
+            .sectionTitle {
+            font-size: 1.8rem;
+            font-weight: 600;
+            }
+        
+            .admProgTabList .active {
+            background-color: #0056b3;
+            color: #fff;
+            }
+        
+            .admProgWrap ul {
+            padding-left: 1rem;
+            }
+        
+            .aacName {
+            font-weight: 600;
+            margin-bottom: 5px;
+            display: inline-block;
+            }
+        
+            .admProgmContentWrap .row > div {
+            margin-bottom: 1rem;
+            }
+        
+            .admProgmContentWrap ul {
+            list-style: disc;
+            padding-left: 20px;
+            }
+        
+            .accordion .accordion-header {
+            font-weight: bold;
+            }
+
+            .admProgTabList {
+            list-style: none;
+            padding-left: 0;
+            }
+        </style>
+  
 
         <!--=== Title ===-->
         <title>SGT UNIVERSITY</title>
@@ -298,9 +343,7 @@
                         <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
                             <ul class="navbar-nav ms-auto">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link active">
-                                        Home            
-                                    </a>
+                                    <a href="#" class="nav-link active">Home</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="#about" class="nav-link">About Us</a>
@@ -310,9 +353,6 @@
                                 </li>
                                 <li class="nav-item">
                                     <a href="#campus" class="nav-link">Life at SGT</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#events" class="nav-link">Events</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="#testimonial" class="nav-link">Testimonials</a>
@@ -371,7 +411,7 @@
                                 <div class="icon">
                                     <i class="flaticon-college"></i>
                                 </div>
-                                <a href="#"><h3>23 Years of Excellence</h3></a>
+                                <a href="#"><h3>₹ 32 LPA Highest Package</h3></a>
                                 <!-- <a href="academics-details.html" class="read-more-btn white-color">Graduate Education<i class="flaticon-next"></i></a> -->
                             </div>
                         </div>
@@ -393,7 +433,7 @@
                                 <div class="icon">
                                     <i class="flaticon-college-graduation"></i>
                                 </div>
-                                <a href="#"><h3>1:10 Teacher-Student Ratio</h3></a>
+                                <a href="#"><h3>275+ Campus Recruiters</h3></a>
                                 <!-- <a href="academics-details.html" class="read-more-btn white-color">Graduate Education<i class="flaticon-next"></i></a> -->
                             </div>
                         </div>
@@ -404,7 +444,7 @@
                                 <div class="icon">
                                     <i class="flaticon-athletics"></i>
                                 </div>
-                                <a href="#"><h3>275+ Campus Recruiters</h3></a>
+                                <a href="#"><h3>45+ Engineering Labs</h3></a>
                                 <!-- <a href="academics-details.html" class="read-more-btn white-color">Graduate Education<i class="flaticon-next"></i></a> -->
                             </div>
                         </div>
@@ -426,13 +466,8 @@
                     <div class="col-lg-7">
                         <div class="campus-content style-2">
                             <div class="campus-title">
-                                <h2>Why Choose SGTU for MBA?</h2>
-                                <p style="text-align: justify;">The Faculty of Commerce and Management at SGT University (SGTU) is dedicated to shaping
-                                    future business leaders with a strong foundation in management principles, innovation, and
-                                    strategic thinking. As one of the Best MBA Colleges in India, we offer top-tier MBA programs
-                                    across diverse specializations, including Finance, Marketing, Business Analytics, Human
-                                    Resource Management, International Business, and more, designed to prepare students for
-                                    leadership roles in the corporate world.</p>
+                                <h2>Why Choose SGTU for B. Tech?</h2>
+                                <p style="text-align: justify;">The Faculty of Engineering and Technology at SGT University (SGTU) is committed to nurturing the next generation of engineers through cutting-edge technology, innovation-driven education, and hands-on learning. As one of the Best B.Tech Colleges in India, SGTU offers industry-aligned B.Tech programs in specializations such as Computer Science & Engineering, Artificial Intelligence & Machine Learning, Mechanical Engineering, Electronics & Communication, Civil Engineering, and more. The curriculum is designed to equip students with the technical expertise, problem-solving skills, and real-world exposure needed to thrive in today’s fast-evolving technological landscape.</p>
                             </div>
                             <!-- <div class="list">
                                 <div class="row">
@@ -530,121 +565,12 @@
             </div>
         </div>
 
-        <!--Start Courses Area-->
-        <div class="courses-area pt-70 pb-50 bg-f4f6f9" id="courses">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Programs Offered</h2>
-                    <p style="font-size: 18px;"><b>Industry-Focused MBA Specializations at SGT University</b></p>
-                </div>
-                <div class="courses-slider style-2 owl-carousel owl-theme">
-                    <div class="single-courses-card style3">
-                        <div class="courses-img">
-                            <a href="#"><img src="assets/images/courses/courses-1.jpg" alt="Image"></a>
-                        </div>
-                        <div class="courses-content">
-                            <!-- <div class="list-1">
-                                <ul class="d-flex justify-content-between">
-                                    <li><i class="flaticon-graduation"></i>321</li>
-                                    <li><i class="flaticon-bubble-chat"></i>1.2k</li>
-                                </ul>
-                            </div> -->
-                            <a href="#"><h3>Finance/Fintech</h3></a>
-                            <!-- <div class="admin-profile">
-                                <img src="assets/images/courses/admin-1.jpg" alt="Image">
-                                <p>With <a href="#">Jessica Hamson</a></p>
-                            </div>
-                            <div class="bottom-content">
-                                <ul class="d-flex justify-content-between">
-                                    <li>
-                                        <ul>
-                                            <li><i class="ri-star-fill"></i></li>
-                                            <li><i class="ri-star-fill"></i></li> 
-                                            <li><i class="ri-star-fill"></i></li>
-                                            <li class="blank"><i class="ri-star-line"></i></li>
-                                            <li class="blank"><i class="ri-star-line"></i></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Free</a></li>
-                                </ul>
-                            </div> -->
-                        </div>
-                    </div>
-                    <div class="single-courses-card style3">
-                        <div class="courses-img">
-                            <a href="#"><img src="assets/images/courses/courses-2.jpg" alt="Image"></a>
-                        </div>
-                        <div class="courses-content">
-                            <a href="#"><h3>Human Resources (HR)</h3></a>
-                        </div>
-                    </div>
-                    <div class="single-courses-card style3">
-                        <div class="courses-img">
-                            <a href="#"><img src="assets/images/courses/courses-3.jpg" alt="Image"></a>
-                        </div>
-                        <div class="courses-content">
-                            <a href="#"><h3>Marketing</h3></a>
-                        </div>
-                    </div>
-                    <div class="single-courses-card style3">
-                        <div class="courses-img">
-                            <a href="#"><img src="assets/images/courses/courses-1.jpg" alt="Image"></a>
-                        </div>
-                        <div class="courses-content">
-                            <a href="#"><h3>International Business</h3></a>
-                        </div>
-                    </div>
-                    <div class="single-courses-card style3">
-                        <div class="courses-img">
-                            <a href="#"><img src="assets/images/courses/courses-2.jpg" alt="Image"></a>
-                        </div>
-                        <div class="courses-content">
-                            <a href="#"><h3>Logistics and Supply Chain Management</h3></a>
-                        </div>
-                    </div>
-                    <div class="single-courses-card style3">
-                        <div class="courses-img">
-                            <a href="#"><img src="assets/images/courses/courses-3.jpg" alt="Image"></a>
-                        </div>
-                        <div class="courses-content">
-                            <a href="#"><h3>Digital & Social Media Marketing</h3></a>
-                        </div>
-                    </div>
-                    <div class="single-courses-card style3">
-                        <div class="courses-img">
-                            <a href="#"><img src="assets/images/courses/courses-2.jpg" alt="Image"></a>
-                        </div>
-                        <div class="courses-content">
-                            <a href="#"><h3>Healthcare Management</h3></a>
-                        </div>
-                    </div>
-                    <div class="single-courses-card style3">
-                        <div class="courses-img">
-                            <a href="#"><img src="assets/images/courses/courses-4.jpg" alt="Image"></a>
-                        </div>
-                        <div class="courses-content">
-                            <a href="#"><h3>Business Analytics</h3></a>
-                        </div>
-                    </div>
-                    <div class="single-courses-card style3">
-                        <div class="courses-img">
-                            <a href="#"><img src="assets/images/courses/courses-3.jpg" alt="Image"></a>
-                        </div>
-                        <div class="courses-content">
-                            <a href="#"><h3>Entrepreneurship and Family Business Management</h3></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--End Courses Area-->
-
         <!-- Start Courses Area -->
         <div class="courses-area pt-50 pb-50 bg-f4f6f9" id="courses">
             <div class="container">
                 <div class="section-title">
                     <h2>Programs Offered</h2>
-                    <p style="font-size: 18px;"><b>Industry-Focused MBA Specializations at SGT University</b></p>
+                    <p style="font-size: 18px;"><b>Industry-Focused Btech Specializations at SGT University</b></p>
                 </div>
                 <div class="row">
                     <div class="col-md-3 col-sm-6 mb-4">
@@ -653,7 +579,7 @@
                                 <a href="#"><img src="assets/images/courses/courses-1.jpg" alt="Image"></a>
                             </div>
                             <div class="courses-content">
-                                <a href="#"><h3>Finance/Fintech</h3></a>
+                                <a href="#"><h3>Computer Science & Engineering</h3></a>
                             </div>
                         </div>
                     </div>
@@ -663,7 +589,7 @@
                                 <a href="#"><img src="assets/images/courses/courses-2.jpg" alt="Image"></a>
                             </div>
                             <div class="courses-content">
-                                <a href="#"><h3>Human Resources (HR)</h3></a>
+                                <a href="#"><h3>CSE with specialization (Industry Collaborations)</h3></a>
                             </div>
                         </div>
                     </div>
@@ -673,7 +599,7 @@
                                 <a href="#"><img src="assets/images/courses/courses-3.jpg" alt="Image"></a>
                             </div>
                             <div class="courses-content">
-                                <a href="#"><h3>Marketing</h3></a>
+                                <a href="#"><h3>CSE with specialization in Software Product Engineering</h3></a>
                             </div>
                         </div>
                     </div>
@@ -683,7 +609,7 @@
                                 <a href="#"><img src="assets/images/courses/courses-1.jpg" alt="Image"></a>
                             </div>
                             <div class="courses-content">
-                                <a href="#"><h3>International Business</h3></a>
+                                <a href="#"><h3>CSE with specialization in AI and Future Technologies</h3></a>
                             </div>
                         </div>
                     </div>
@@ -693,7 +619,7 @@
                                 <a href="#"><img src="assets/images/courses/courses-2.jpg" alt="Image"></a>
                             </div>
                             <div class="courses-content">
-                                <a href="#"><h3>Logistics and Supply Chain Management</h3></a>
+                                <a href="#"><h3>Mechanical Engineering</h3></a>
                             </div>
                         </div>
                     </div>
@@ -703,7 +629,7 @@
                                 <a href="#"><img src="assets/images/courses/courses-3.jpg" alt="Image"></a>
                             </div>
                             <div class="courses-content">
-                                <a href="#"><h3>Digital & Social Media Marketing</h3></a>
+                                <a href="#"><h3>Civil Engineering</h3></a>
                             </div>
                         </div>
                     </div>
@@ -713,27 +639,7 @@
                                 <a href="#"><img src="assets/images/courses/courses-2.jpg" alt="Image"></a>
                             </div>
                             <div class="courses-content">
-                                <a href="#"><h3>Healthcare Management</h3></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 mb-4">
-                        <div class="single-courses-card style3">
-                            <div class="courses-img">
-                                <a href="#"><img src="assets/images/courses/courses-4.jpg" alt="Image"></a>
-                            </div>
-                            <div class="courses-content">
-                                <a href="#"><h3>Business Analytics</h3></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-6 mb-4">
-                        <div class="single-courses-card style3">
-                            <div class="courses-img">
-                                <a href="#"><img src="assets/images/courses/courses-3.jpg" alt="Image"></a>
-                            </div>
-                            <div class="courses-content">
-                                <a href="#"><h3>Entrepreneurship and Family Business Management</h3></a>
+                                <a href="#"><h3>Electronics & Communication Engineering</h3></a>
                             </div>
                         </div>
                     </div>
@@ -742,45 +648,41 @@
         </div>
         <!-- End Courses Area -->
 
-        <section class="program-section">
-            <div class="container">
-                <h2>Find a Programme</h2>
-    
-                <div class="row">
-                    <!-- Left Sidebar -->
-                    <div class="col-md-4 program-list">
-                        <ul class="list-group">
-                            <li class="list-group-item"><button class="program-btn active" data-src="prgmData/ahs.html">Allied Health Sciences</button></li>
-                            <li class="list-group-item"><button class="program-btn" data-src="prgmData/agri.html">Agricultural Sciences</button></li>
-                            <li class="list-group-item"><button class="program-btn" data-src="prgmData/bhs.html">Behavioural Sciences</button></li>
-                            <li class="list-group-item"><button class="program-btn" data-src="prgmData/cm.html">Commerce & Management</button></li>
-                            <li class="list-group-item"><button class="program-btn" data-src="prgmData/dental.html">Dental Sciences (SGT Dental College)</button></li>
-                            <li class="list-group-item"><button class="program-btn" data-src="prgmData/education.html">Education</button></li>
-                            <li class="list-group-item"><button class="program-btn" data-src="prgmData/engineering.html">Engineering & Technology</button></li>
-                            <li class="list-group-item"><button class="program-btn" data-src="prgmData/fashion.html">Design</button></li>
-                            <li class="list-group-item"><button class="program-btn" data-src="prgmData/htm.html">Hotel & Tourism Management</button></li>
-                            <li class="list-group-item"><button class="program-btn" data-src="prgmData/ims.html">Indian Medical System (Ayurveda)</button></li>
-                            <li class="list-group-item"><button class="program-btn" data-src="prgmData/law.html">Law</button></li>
-                            <li class="list-group-item"><button class="program-btn" data-src="prgmData/medical.html">Medicine & Health Sciences</button></li>
-                            <li class="list-group-item"><button class="program-btn" data-src="prgmData/masscomm.html">Mass Communication & Media Technology</button></li>
-                            <li class="list-group-item"><button class="program-btn" data-src="prgmData/nursing.html">Nursing</button></li>
-                            <li class="list-group-item"><button class="program-btn" data-src="prgmData/fnys.html">Naturopathy and Yogic Sciences</button></li>
-                            <li class="list-group-item"><button class="program-btn" data-src="prgmData/physiotherapy.html">Physiotherapy</button></li>
-                            <li class="list-group-item"><button class="program-btn" data-src="prgmData/science.html">Applied and Basic Sciences</button></li>
-                            <li class="list-group-item"><button class="program-btn" data-src="prgmData/pharmacy.html">SGT College of Pharmacy</button></li>
-                            
-                        </ul>
-                    </div>
-    
-                    <!-- Right Content -->
-                    <div class="col-md-8">
-                        <div class="program-content-box">
-                            <div class="program-content">Loading...</div>
-                        </div>
-                    </div>
+        <section class="blueBg-1 py-5 mb-5 admProgramSection">
+            <div class="container fadeIn animateThis">
+          
+              <h2 class="sectionTitle text-white mb-4">Explore our specialized B.Tech programs</h2>
+          
+              <div class="row">
+                <!-- Tab List -->
+                <div class="col-md-4 mb-4 mb-md-0">
+                  <ul class="list-group admProgTabList">
+                    <li><button class="list-group-item list-group-item-action aptlBtn active" data-src="prgmData/b-tech-cse.html">B.Tech CSE</button></li>
+                    <li><button class="list-group-item list-group-item-action aptlBtn" data-src="prgmData/b-tech-cse-ai-fet.html">B.Tech CSE (AI and FT)</button></li>
+                    <li><button class="list-group-item list-group-item-action aptlBtn" data-src="prgmData/b-tech-cse-spe.html">B.Tech CSE (SPE)</button></li>
+                    <li><button class="list-group-item list-group-item-action aptlBtn" data-src="prgmData/b-tech-me.html">B.Tech Mechanical Engineering</button></li>
+                    <li><button class="list-group-item list-group-item-action aptlBtn" data-src="prgmData/b-tech-ce.html">B.Tech Civil Engineering</button></li>
+                    <li><button class="list-group-item list-group-item-action aptlBtn" data-src="prgmData/b-tech.ece.html">B.Tech ECE</button></li>
+                  </ul>
                 </div>
+          
+                <!-- Program Details -->
+                <div class="col-md-8">
+                  <div class="admProgMain">
+                    <div class="d-flex align-items-center gap-3 d-md-none admProgMainTitle mb-3">
+                      <div><button class="btn btn-secondary apmClose">&#10229;</button></div>
+                      <div class="admSelectedFaculty fw-bold text-white"></div>
+                    </div>
+                    <div class="admProgWrap border rounded p-4 bg-light" id="admProgWrap">
+                      <!-- External content will be loaded here -->
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-        </section>
+          </section>
+          
+          
 
         <!-- <section class="admission-process text-center py-5">
             <div class="container">
@@ -839,15 +741,10 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6 col-md-6">
                         <div class="admission-left-content">
-                            <h2>Your Perfect Academic Destination: SGT University</h2>
-                            <p>One of India's youngest "NAAC A+" institutions.</p>
-                            <p>Ranked among “Top Emerging B-schools” by TOI in 2016 and 2020</p>
-                            <p>Recognised as a Business Incubator (BI) by the Ministry of Micro, Small and Medium</p>
-                            <p>Enterprises (MSME), Government of India.</p>
-                            <p>Multiple Faculties in the Top 2% Scientists of Stanford University Ranking</p>
-                            <p>Research and Development Highlights: 10 Cr+ Extramural Grants, 2 Cr+ Seed Money and Incentives, 20+ Startups, 5000+ Publications, 600+ Patents</p>
-                            <p>800-plus-bed affiliated SGT Hospital for medical services and clinical training</p>
-                            <a href="admission.html" class="default-btn btn">More on admission<i class="flaticon-next"></i></a>
+                            <h2>Up to 100% Merit-Based Scholarships available under the following criteria:</h2>
+                            <p>10+2 Marks: Based on academic performance</p>
+                            <p>CUET Percentile: As per entrance exam results</p>
+                            <p>Sports Achievements: For outstanding sports performance</p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6">
@@ -871,7 +768,7 @@
         <div class="testimonial-area ptb-100" id="testimonial">
             <div class="container">
                 <div class="section-title text-center m-auto">
-                    <h2>What Student’s Say</h2>
+                    <h2>Testimonials</h2>
                 </div>
                 <div class="row align-items-center data-cues="slideInUp">
                     <div class="col-lg-4">
@@ -893,15 +790,15 @@
                                                 <li class="d-inline-block"><i class="flaticon-star-1"></i></li>
                                                 <li class="d-inline-block"><i class="flaticon-star-1"></i></li>
                                             </ul>
-                                            <p>Universities value students who can think critically and solve problems. Reviewers may assess a student's ability to analyze information, evaluate different perspectives, and apply logical reasoning to arrive at solutions. Many university programs involve group projects or collaborative activities.</p>
+                                            <p>I am delighted to be a student at SGT University. The college has been a beautiful experience in my life, supporting us at every stage of our professional growth. SGT focuses not only on making students scholars but also on providing an environment where we can study and develop practical, real-life knowledge. I truly appreciate our university's teaching approach; everyone works tirelessly to ensure that students can easily grasp the subject matter. One of the highlights of my experience has been the dedicated faculty members and supportive seniors. I am grateful for the care and encouragement of my fellow students, instructors, and other faculty members.</p>
                                             <div class="d-flex align-items-center justify-content-between">
                                                 <div class="user d-flex align-items-center">
                                                     <div class="image">
                                                         <img src="assets/images/testimonial/testimonial-3.jpg" alt="testimonial-image">
                                                     </div>
                                                     <div class="content">
-                                                        <h3>John Smith</h3>
-                                                        <span>Adma’s student</span>
+                                                        <h3>Vishal Singh</h3>
+                                                        <span>B.Tech (CSE), SGT University</span>
                                                     </div>
                                                 </div>
                                                 <div class="quote-icon">
@@ -919,15 +816,15 @@
                                                 <li class="d-inline-block"><i class="flaticon-star-1"></i></li>
                                                 <li class="d-inline-block"><i class="flaticon-star-1"></i></li>
                                             </ul>
-                                            <p>Universities value students who can think critically and solve problems. Reviewers may assess a student's ability to analyze information, evaluate different perspectives, and apply logical reasoning to arrive at solutions. Many university programs involve group projects or collaborative activities.</p>
+                                            <p>I am currently employed as a Senior Executive Engineer at CREAT UNO MINDA, where I am focused on developing successful products for the automobile market, specifically in lighting and sound systems. I would like to congratulate my alma mater, SGT University, for being a significant milestone in shaping my career as an expert in regulations, checks, standards, and design validation. Along with academics, SGT University instils in students like me a persona that helps us navigate the professional world. My experience at SGT University has been nothing short of wonderful, and I attribute my success to the foundation it provided.</p>
                                             <div class="d-flex align-items-center justify-content-between">
                                                 <div class="user d-flex align-items-center">
                                                     <div class="image">
                                                         <img src="assets/images/testimonial/testimonial-4.jpg" alt="testimonial-image">
                                                     </div>
                                                     <div class="content">
-                                                        <h3>James Harris</h3>
-                                                        <span>Adma’s student</span>
+                                                        <h3>Chirag Arya</h3>
+                                                        <span>B.Tech (Mechanical Engineering), SGT University</span>
                                                     </div>
                                                 </div>
                                                 <div class="quote-icon">
@@ -945,15 +842,15 @@
                                                 <li class="d-inline-block"><i class="flaticon-star-1"></i></li>
                                                 <li class="d-inline-block"><i class="flaticon-star-1"></i></li>
                                             </ul>
-                                            <p>Universities value students who can think critically and solve problems. Reviewers may assess a student's ability to analyze information, evaluate different perspectives, and apply logical reasoning to arrive at solutions. Many university programs involve group projects or collaborative activities.</p>
+                                            <p>I’m Deepanshi Vashisht from the Faculty of Engineering and Technology. I am delighted to share my incredible four-year journey at SGT University with you. SGT University is the best place to enhance your skills and build confidence. I recently completed my B.Tech in Computer Science, and I must say that these four years have been the best of my life. The University provides every student with the resources they need to succeed. I had an amazing experience at SGT, and they offered me numerous opportunities to learn and grow. A big thank you to all of my faculty members for fostering such a supportive and encouraging environment.</p>
                                             <div class="d-flex align-items-center justify-content-between">
                                                 <div class="user d-flex align-items-center">
                                                     <div class="image">
                                                         <img src="assets/images/testimonial/testimonial-2.jpg" alt="testimonial-image">
                                                     </div>
                                                     <div class="content">
-                                                        <h3>David Wilson</h3>
-                                                        <span>Adma’s student</span>
+                                                        <h3>Deepanshi Vashisht</h3>
+                                                        <span>B.Tech (CSE), SGT University</span>
                                                     </div>
                                                 </div>
                                                 <div class="quote-icon">
@@ -962,7 +859,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="swiper-slide">
+                                    <!-- <div class="swiper-slide">
                                         <div class="testimonial-slider-item">
                                             <ul class="list-unstyled ps-0 star-icon">
                                                 <li class="d-inline-block"><i class="flaticon-star-1"></i></li>
@@ -987,7 +884,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
 
@@ -1019,11 +916,11 @@
                                                 <img src="assets/images/testimonial/testimonial-5.jpg" alt="testimonial-image">
                                             </div>
                                         </div>
-                                        <div class="swiper-slide">
+                                        <!-- <div class="swiper-slide">
                                             <div class="testimonial-item-image">
                                                 <img src="assets/images/testimonial/testimonial-6.jpg" alt="testimonial-image">
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
 
@@ -1055,70 +952,69 @@
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingOne">
                                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        1. Is a phone call considered SGT University?
+                                        1. Why is SGT University considered among the top B.Tech colleges in India?
                                     </button>
                                     </h2>
                                     <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        There are many variations of passages of Lorem Ipsum available, the
-                                        many variations of passages of Lorem Ipsum available, majority have
-                                        injected humour, randomised words don't look believable.
+                                        SGTU is ranked 4th in India by The Times of India, holds NAAC A+ Accreditation, and is recognized for its industry-driven curriculum, placement success, and state-of-the-art infrastructure. The Faculty of Engineering & Technology stands out for its innovation, global exposure, and a strong focus on student transformation.
                                     </div>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingTwo">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        2. What equipment do you need for SGT University?
+                                        2. What are the specialization options available in B.Tech?
                                     </button>
                                     </h2>
                                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        There are many variations of passages of Lorem Ipsum available, the
-                                        many variations of passages of Lorem Ipsum available, majority have
-                                        injected humour, randomised words don't look believable.
+                                        SGTU offers a wide range of specializations in B.Tech including:
+                                        <ul>
+                                            <li>Artificial Intelligence & Machine Learning</li>
+                                            <li>Cyber Security</li>
+                                            <li>Cloud Computing</li>
+                                            <li>Blockchain & Data Science</li>
+                                            <li>Electric Vehicle & Robotics Engineering</li>
+                                            <li>Green Technology & Construction</li>
+                                            <li>VLSI Design & Embedded Systems</li>
+                                        </ul>
                                     </div>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingThree">
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        3. Can you use FaceTime for SGT University?
+                                        3. What is the duration of the B.Tech programs?
                                     </button>
                                     </h2>
                                     <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                                     <div class="accordion-body">
-                                        There are many variations of passages of Lorem Ipsum available, the
-                                        many variations of passages of Lorem Ipsum available, majority have
-                                        injected humour, randomised words don't look believable.
+                                        At SGT the duration of B.Tech programs is 4 years (8 semesters).
                                     </div>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingFour">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                        4. How do I get started with SGT University?
+                                        4. Are the B.Tech programs industry-integrated?
                                         </button>
                                     </h2>
                                         <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            There are many variations of passages of Lorem Ipsum available, the
-                                            many variations of passages of Lorem Ipsum available, majority have
-                                            injected humour, randomised words don't look believable.
+                                            Yes, most of the B.Tech programs offered at SGTU are industry-backed, developed in collaboration with companies like Kalvium, Amber Enterprises, FutureWiz, Microsoft, and IBM. This ensures students are job-ready and aligned with the latest industry trends.
                                         </div>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingFive">
                                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                        4. How do I get started with SGT University?
+                                        5. Are scholarships available for B.Tech students?
                                         </button>
                                     </h2>
                                         <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
                                         <div class="accordion-body">
-                                            There are many variations of passages of Lorem Ipsum available, the
-                                            many variations of passages of Lorem Ipsum available, majority have
-                                            injected humour, randomised words don't look believable.
+                                            Yes, SGT University offers merit-based scholarships and special category scholarships to support academic excellence and financial needs.
                                         </div>
                                     </div>
                                 </div>
@@ -1358,60 +1254,92 @@
                     }
                 }
             });
-
-
         </script>
         <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                    const tabs = document.querySelectorAll(".aptBtn");
-                    const tabContents = document.querySelectorAll(".apcAccdList");
-                    const accordions = document.querySelectorAll(".apcAccdHead");
+            document.addEventListener("DOMContentLoaded", function () {
+                const tabs = document.querySelectorAll(".aptBtn");
+                const tabContents = document.querySelectorAll(".apcAccdList");
+                const accordions = document.querySelectorAll(".apcAccdHead");
 
-                    // Tab Switching Logic (Only One Tab Open)
-                    tabs.forEach((tab) => {
-                        tab.addEventListener("click", function () {
-                            // Remove active class from all tabs
-                            tabs.forEach((t) => t.classList.remove("active"));
-                            this.classList.add("active");
+                // Tab Switching Logic (Only One Tab Open)
+                tabs.forEach((tab) => {
+                    tab.addEventListener("click", function () {
+                        // Remove active class from all tabs
+                        tabs.forEach((t) => t.classList.remove("active"));
+                        this.classList.add("active");
 
-                            // Hide all tab contents
-                            tabContents.forEach((content) => {
-                                content.classList.remove("active");
-                                content.querySelectorAll(".apcAccdContent").forEach(acc => acc.style.display = "none"); // Close all accordions when switching tabs
-                            });
-
-                            // Show the selected tab content
-                            const target = this.getAttribute("data-title");
-                            document.getElementById(target).classList.add("active");
+                        // Hide all tab contents
+                        tabContents.forEach((content) => {
+                            content.classList.remove("active");
+                            content.querySelectorAll(".apcAccdContent").forEach(acc => acc.style.display = "none"); // Close all accordions when switching tabs
                         });
-                    });
 
-                    // Accordion Toggle Logic (Only One Accordion Open at a Time)
-                    document.addEventListener("click", function (event) {
-                        if (event.target.classList.contains("apcAccdHead")) {
-                            const currentAccordion = event.target.parentElement;
-                            const currentContent = currentAccordion.querySelector(".apcAccdContent");
-
-                            // Close all accordions inside the active tab
-                            const activeTab = document.querySelector(".apcAccdList.active");
-                            activeTab.querySelectorAll(".apcAccdItem").forEach(item => {
-                                item.classList.remove("active");
-                                item.querySelector(".apcAccdContent").style.display = "none";
-                            });
-
-                            // Toggle the clicked accordion
-                            currentAccordion.classList.add("active");
-                            currentContent.style.display = "block";
-                        }
+                        // Show the selected tab content
+                        const target = this.getAttribute("data-title");
+                        document.getElementById(target).classList.add("active");
                     });
                 });
 
+                // Accordion Toggle Logic (Only One Accordion Open at a Time)
+                document.addEventListener("click", function (event) {
+                    if (event.target.classList.contains("apcAccdHead")) {
+                        const currentAccordion = event.target.parentElement;
+                        const currentContent = currentAccordion.querySelector(".apcAccdContent");
 
+                        // Close all accordions inside the active tab
+                        const activeTab = document.querySelector(".apcAccdList.active");
+                        activeTab.querySelectorAll(".apcAccdItem").forEach(item => {
+                            item.classList.remove("active");
+                            item.querySelector(".apcAccdContent").style.display = "none";
+                        });
 
+                        // Toggle the clicked accordion
+                        currentAccordion.classList.add("active");
+                        currentContent.style.display = "block";
+                    }
+                });
+            });
         </script>
-            
-            
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+            const buttons = document.querySelectorAll('.aptlBtn');
+            const wrap = document.getElementById('admProgWrap');
+            const selectedFaculty = document.querySelector('.admSelectedFaculty');
+            const closeBtn = document.querySelector('.apmClose');
         
-
+            function loadContent(src, btn) {
+                fetch(src)
+                .then(response => response.text())
+                .then(html => {
+                    wrap.innerHTML = html;
+                    buttons.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    selectedFaculty.textContent = btn.textContent;
+                })
+                .catch(() => {
+                    wrap.innerHTML = `<p class="text-danger">Failed to load content.</p>`;
+                });
+            }
+        
+            // Auto-load first tab on page load
+            if (buttons.length > 0) {
+                loadContent(buttons[0].getAttribute('data-src'), buttons[0]);
+            }
+        
+            buttons.forEach(button => {
+                button.addEventListener('click', function () {
+                loadContent(this.getAttribute('data-src'), this);
+                });
+            });
+        
+            if (closeBtn) {
+                closeBtn.addEventListener('click', function () {
+                wrap.innerHTML = '';
+                selectedFaculty.textContent = '';
+                buttons.forEach(btn => btn.classList.remove('active'));
+                });
+            }
+            });
+        </script>
     </body>
 </html>
