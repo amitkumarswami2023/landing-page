@@ -34,7 +34,7 @@
         <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
         <style>
         .recruiters-container {
-            border: 2px solid #007bff;
+            border: 2px solid #FF6D00;
             border-radius: 10px;
             padding: 20px;
             background-color: #f8f9fa;
@@ -51,223 +51,16 @@
             filter: grayscale(0%);
         }
         </style>
-        <style>
-            .apcAccdList {
-                display: none; /* Hide all sections by default */
-            }
-
-            .apcAccdList.active {
-                display: block; /* Show only the active section */
-            }
-
-        </style>
-        <style>
-            /* ---- TAB STYLES ---- */
-            .admProgmType {
-                display: flex;
-                justify-content: start;
-                border-bottom: 2px solid #ddd;
-            }
-
-            .aptBtn {
-                padding: 10px 20px;
-                border: none;
-                background: #f0f0f0;
-                cursor: pointer;
-                font-size: 16px;
-                transition: background 0.3s, color 0.3s;
-            }
-
-            .aptBtn.active {
-                background: #007bff;
-                color: #fff;
-                font-weight: bold;
-            }
-
-            /* ---- HIDE ALL TAB CONTENTS INITIALLY ---- */
-            .apcAccdList {
-                display: none;
-            }
-
-            .apcAccdList.active {
-                display: block;
-            }
-
-            /* ---- ACCORDION STYLES ---- */
-            .apcAccdItem {
-                border: 1px solid #ddd;
-                margin-bottom: 10px;
-                border-radius: 5px;
-                overflow: hidden;
-            }
-
-            .apcAccdHead {
-                background: white;
-                color: #007bff;
-                padding: 15px;
-                cursor: pointer;
-                font-weight: bold;
-                transition: background 0.3s;
-            }
-
-            .apcAccdHead:hover {
-                /* background: #0056b3; */
-            }
-
-            .apcAccdContent {
-                display: none;
-                padding: 15px;
-                background: #f9f9f9;
-            }
-
-            /* Show content when accordion is open */
-            .apcAccdItem.active .apcAccdContent {
-                display: block;
-            }
-
-            /* ---- RESPONSIVE FIXES ---- */
-            @media (max-width: 768px) {
-                .admProgmType {
-                    flex-direction: column;
-                }
-                
-                .aptBtn {
-                    width: 100%;
-                    text-align: center;
-                }
-            }
-
-        </style>
 
         <style>
             @media (max-width: 768px) {
                 .col-12 { width: 100%; min-height: auto; }
             }
         </style>
-        <style>
-            /* Section Styling */
-            .program-section {
-                background-color: #0060AA;
-                padding: 3rem 0;
-                margin-bottom: 3rem;
-            }
-
-            .program-section h2 {
-                color: white;
-                text-align: center;
-                font-size: 2rem;
-                font-weight: bold;
-                margin-bottom: 1.5rem;
-            }
-
-            /* Sidebar (List of Programs) */
-            .program-list .list-group-item {
-                padding: 5px;
-                border: none;
-                background: white;
-                cursor: pointer;
-                transition: all 0.3s ease;
-            }
-
-            .program-list .list-group-item button {
-                width: 100%;
-                padding: 10px;
-                background: none;
-                border: none;
-                color: #002846;
-                font-size: 18px;
-                text-align: left;
-                cursor: pointer;
-                transition: all 0.3s ease;
-            }
-
-            .program-list .list-group-item button:hover,
-            .program-list .list-group-item button.active {
-                background: #FF6D00;
-                color: white;
-            }
-
-            /* Program Content Box */
-            .program-content-box {
-                background: white;
-                padding: 20px;
-                border-radius: 8px;
-                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-                min-height: 250px; /* Keeps content visible */
-            }
-
-            /* Tab Buttons (Bachelor, Masters, PhD) */
-            .admProgmType {
-                display: flex;
-                gap: 10px;
-                margin-bottom: 15px;
-            }
-
-            .aptBtn {
-                background-color: #0056b3;
-                color: white;
-                border: none;
-                padding: 10px 15px;
-                border-radius: 5px;
-                cursor: pointer;
-                transition: all 0.3s ease;
-            }
-
-            .aptBtn:hover,
-            .aptBtn.active {
-                background-color: #FF6D00;
-            }
-
-            /* Accordion Items (Initially Hidden) */
-            .apcAccdList {
-                display: none;
-            }
-
-            .apcAccdList.active {
-                display: block;
-            }
-
-            /* Program Details */
-            .apcAccdItem {
-                background: #f8f9fa;
-                padding: 15px;
-                border-radius: 5px;
-                margin-bottom: 10px;
-                box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-            }
-
-            .apcAccdHead {
-                font-weight: bold;
-                font-size: 1.2rem;
-                margin-bottom: 10px;
-            }
-
-            .aacName {
-                font-weight: bold;
-                color: #333;
-                font-size: 18px;
-            }
-
-            /* 📱 Mobile Responsive Fix */
-            @media (max-width: 768px) {
-                .row {
-                    flex-direction: column;
-                }
-
-                .program-list {
-                    width: 100%;
-                }
-
-                .program-content-box {
-                    width: 100%;
-                }
-            }
-
-        </style>
 
         <style>
             .blueBg-1 {
-            background-color: #003366;
+            background-color: #111d5e;
             }
         
             .sectionTitle {
@@ -279,6 +72,8 @@
             background-color: #0056b3;
             color: #fff;
             }
+
+
         
             .admProgWrap ul {
             padding-left: 1rem;
@@ -1025,7 +820,7 @@
         <!--End Faq Area-->
         
         <!--Start Footer Area-->
-        <div class="footer-area pt-100 pb-70">
+        <!-- <div class="footer-area pt-100 pb-70">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 col-sm-6">
@@ -1091,7 +886,7 @@
                     <img src="assets/images/shape-1.png" alt="Image">
                 </div>
             </div>
-        </div>
+        </div> -->
         <!--End Footer Area-->
 
         <!--Start Copyright Area-->
@@ -1099,7 +894,7 @@
             <div class="container">
                 <div class="copyright">
                     <div class="row">
-                        <div class="col-lg-6 col-md-4">
+                        <!-- <div class="col-lg-6 col-md-4">
                             <div class="social-content">
                                 <ul>
                                     <li><span>Follow Us On</span></li>
@@ -1117,9 +912,9 @@
                                     </li>
                                 </ul>
                             </div>
-                        </div>
-                        <div class="col-lg-6 col-md-8">
-                            <div class="copy">
+                        </div> -->
+                        <div class="col-lg-12 col-md-12">
+                            <div class="copy" style="text-align: center;">
                                 <p>© SGT UNIVERSITY</p>
                             </div>
                         </div>

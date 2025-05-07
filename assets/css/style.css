@@ -2660,9 +2660,9 @@ Campus Life Style
 Admission Style
 ======================================================*/
 .admisssion-area.admission-bg {
-  background-image: url(../images/admission/admission-3.jpg);
+  background-image: url(../images/banner/mainBanner.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
   position: relative;
   overflow: hidden;
@@ -4171,10 +4171,10 @@ CopyRight Style
 }
 
 .copyright {
-  padding: 30px 0;
+  padding: 10px 0;
 }
 .copyright .copy {
-  text-align: right;
+  text-align: center;
 }
 .copyright .copy p {
   color: #cacaca;
@@ -4628,7 +4628,7 @@ Faq Area Style
 
 .accordion .accordion-item {
   margin-bottom: 20px;
-  border: 1px solid rgba(236, 240, 13, 0.89);
+  border: 1px solid #FF6D00;
   border-radius: 10px;
 }
 .accordion .accordion-item:last-child {
