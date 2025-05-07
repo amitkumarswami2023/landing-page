@@ -1701,16 +1701,16 @@ Education Style
   z-index: 1;
 }
 .single-education-card.bg-1 {
-  background-image: url(../images/academics/academic-4.jpg);
+  background-image: url(../images/academics/faculties.webp);
 }
 .single-education-card.bg-2 {
-  background-image: url(../images/academics/academic-5.jpg);
+  background-image: url(../images/academics/library.webp);
 }
 .single-education-card.bg-3 {
-  background-image: url(../images/academics/academic-6.jpg);
+  background-image: url(../images/academics/onlineCourse.webp);
 }
 .single-education-card.bg-4 {
-  background-image: url(../images/academics/academic-7.jpg);
+  background-image: url(../images/academics/dept_of_mech_engg.webp);
 }
 .single-education-card .edication-content {
   text-align: center;
