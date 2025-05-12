@@ -32,6 +32,8 @@
         <!--Responsive css-->
         <link rel="stylesheet" href="assets/css/responsive.css">
         <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+        <!-- Include Swiper CSS -->
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
         <style>
         .recruiters-container {
             border: 2px solid #FF6D00;
@@ -180,15 +182,15 @@
         <div class="container-fluid d-md-none">
             <div class="row">
                 <!-- Image Section for Mobile -->
-                <div class="col-12 text-center p-4" style="background: url('assets/images/banner/banner-mba1.png') center/cover no-repeat; min-height: 30vh;">
+                <div class="col-12 text-center p-4" style="background: url('assets/images/banner/banner-mba1.png') center/cover no-repeat; min-height: 20vh;">
                     <!-- <h1 class="text-white">SGT MBA: The Launchpad for Visionary Leaders</h1> -->
                 </div>
                 
                 <!-- Form Section for Mobile -->
                 <div class="col-12 d-flex align-items-center justify-content-center p-4">
                     <div class="w-100 bg-light p-4" style="max-width: 500px; border-radius: 10px;">
-                        <h3 class="text-center mb-4">Get More Information</h3>
-                        <iframe name="leadsquared_landing_page_frame" src="https://sgtuni.viewpage.co/SGTU-LMS-organic?ignoremxtracking=mxtrue" width="100%" height="560" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+                        <!-- <h3 class="text-center mb-4">Get More Information</h3> -->
+                        <iframe name="leadsquared_landing_page_frame" src="https://sgtuni.viewpage.co/SGTU-LMS-organic?ignoremxtracking=mxtrue" width="100%" height="500" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
                     </div>
                 </div>
             </div>
@@ -197,50 +199,81 @@
         <!--Start Education Area-->
         <div class="eduction-area pb-70">
             <div class="container-fluid p-0">
-                <div class="row g-0">
-                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200" data-aos-once="true">
+                <!-- Desktop View (Hidden on Mobile) -->
+                <div class="row g-0 d-none d-lg-flex">
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
                         <div class="single-education-card bg-1">
                             <div class="edication-content">
-                                <div class="icon">
-                                    <i class="flaticon-college"></i>
-                                </div>
+                                <div class="icon"><i class="flaticon-college"></i></div>
                                 <a href="#"><h3>₹ 32 LPA Highest Package</h3></a>
-                                <!-- <a href="academics-details.html" class="read-more-btn white-color">Graduate Education<i class="flaticon-next"></i></a> -->
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400" data-aos-once="true">
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
                         <div class="single-education-card bg-2">
                             <div class="edication-content">
-                                <div class="icon">
-                                    <i class="flaticon-student-with-graduation-cap"></i>
-                                </div>
+                                <div class="icon"><i class="flaticon-student-with-graduation-cap"></i></div>
                                 <a href="#"><h3>90% Placement Success Rate</h3></a>
-                                <!-- <a href="academics-details.html" class="read-more-btn white-color">Graduate Education<i class="flaticon-next"></i></a> -->
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="600" data-aos-once="true">
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="600">
                         <div class="single-education-card bg-3">
                             <div class="edication-content">
-                                <div class="icon">
-                                    <i class="flaticon-college-graduation"></i>
-                                </div>
+                                <div class="icon"><i class="flaticon-college-graduation"></i></div>
                                 <a href="#"><h3>275+ Campus Recruiters</h3></a>
-                                <!-- <a href="academics-details.html" class="read-more-btn white-color">Graduate Education<i class="flaticon-next"></i></a> -->
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="800" data-aos-once="true">
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="800">
                         <div class="single-education-card bg-4">
                             <div class="edication-content">
-                                <div class="icon">
-                                    <i class="flaticon-athletics"></i>
-                                </div>
+                                <div class="icon"><i class="flaticon-athletics"></i></div>
                                 <a href="#"><h3>45+ Engineering Labs</h3></a>
-                                <!-- <a href="academics-details.html" class="read-more-btn white-color">Graduate Education<i class="flaticon-next"></i></a> -->
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                <!-- Mobile View Swiper (Hidden on Desktop) -->
+                <div class="d-block d-lg-none">
+                    <div class="swiper eduction-swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="single-education-card bg-1">
+                                    <div class="edication-content">
+                                        <div class="icon"><i class="flaticon-college"></i></div>
+                                        <a href="#"><h3>₹ 32 LPA Highest Package</h3></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="single-education-card bg-2">
+                                    <div class="edication-content">
+                                        <div class="icon"><i class="flaticon-student-with-graduation-cap"></i></div>
+                                        <a href="#"><h3>90% Placement Success Rate</h3></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="single-education-card bg-3">
+                                    <div class="edication-content">
+                                        <div class="icon"><i class="flaticon-college-graduation"></i></div>
+                                        <a href="#"><h3>275+ Campus Recruiters</h3></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="single-education-card bg-4">
+                                    <div class="edication-content">
+                                        <div class="icon"><i class="flaticon-athletics"></i></div>
+                                        <a href="#"><h3>45+ Engineering Labs</h3></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Optional pagination -->
+                        <!-- <div class="swiper-pagination mt-3"></div> -->
                     </div>
                 </div>
             </div>
@@ -958,21 +991,17 @@
         <script src="assets/js/swiper-bundle.min.js"></script>
         <!--=== Custom js ===-->
         <script src="assets/js/custom.js"></script>
+        <!-- Swiper Initialization Script -->
         <script>
-            var swiper = new Swiper(".mySwiper", {
-                slidesPerView: 6,
-                spaceBetween: 20,
-                loop: true,
-                autoplay: {
-                    delay: 2000,
-                    disableOnInteraction: false,
-                },
-                breakpoints: {
-                    320: { slidesPerView: 1 },
-                    768: { slidesPerView: 3 },
-                    1024: { slidesPerView: 6 }
-                }
-            });
+        var swiper1 = new Swiper(".eduction-swiper", {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            breakpoints: {
+            576: {
+                slidesPerView: 2,
+            }
+            }
+        });
         </script>
         <script>
             document.addEventListener("DOMContentLoaded", function () {
