@@ -996,12 +996,33 @@
         var swiper1 = new Swiper(".eduction-swiper", {
             slidesPerView: 1,
             spaceBetween: 0,
+            loop: true,
+            autoplay: {
+                delay: 2000, // Change slide every 3 seconds
+                disableOnInteraction: false,
+            },
             breakpoints: {
             576: {
                 slidesPerView: 2,
             }
             }
         });
+        </script>
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+                slidesPerView: 6,
+                spaceBetween: 20,
+                loop: true,
+                autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false,
+                },
+                breakpoints: {
+                    320: { slidesPerView: 1 },
+                    768: { slidesPerView: 3 },
+                    1024: { slidesPerView: 6 }
+                }
+            });
         </script>
         <script>
             document.addEventListener("DOMContentLoaded", function () {
