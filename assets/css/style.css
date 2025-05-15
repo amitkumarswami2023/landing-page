@@ -254,7 +254,16 @@ Navbar Area Style
   background-color: #ffffff;
   animation: fadeInDown 500ms ease-in-out;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
+}
+
+.compact-navbar {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+.navbar-brand img {
+  max-height: 60px; /* Controls logo height */
+  width: auto;
 }
 
 /* Optional: Add animation keyframes */
